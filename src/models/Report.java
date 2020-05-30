@@ -61,6 +61,10 @@ public class Report {
         this.id = id;
     }
 
+    public Employee getEmployee(){
+        return employee;
+    }
+
     public void setEmployee(Employee employee) {
         this.employee = employee;
     }
@@ -101,7 +105,7 @@ public class Report {
        return updated_at;
    }
 
-   public void setUpdate_at(Timestamp updated_at) {
+   public void setUpdated_at(Timestamp updated_at) {
        this.updated_at = updated_at;
    }
 
