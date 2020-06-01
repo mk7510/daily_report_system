@@ -88,6 +88,8 @@ public class LoginServlet extends HttpServlet {
             rd.forward(request, response);
         } else {
             request.getSession().setAttribute("login_employee", e);
+
+            request.getSession().setAttribute("flush", "ログインしました。");
             response.sendRedirect(request.getContextPath() + "/");
 
         }
