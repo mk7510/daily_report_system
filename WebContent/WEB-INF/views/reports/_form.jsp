@@ -10,6 +10,31 @@
 
     </div>
 </c:if>
+<script type="text/javascript">
+        // 開始時刻設定
+            function getClock_inNow() {
+                  document.getElementById( "clock_in" ).value = getNow();
+                    }
+            // 終了時刻設定
+            function getClock_outNow() {
+                  document.getElementById( "clock_out" ).value = getNow();
+                    }
+            // 現在時刻取得
+            function getNow() {
+                  var now = new Date();
+                  var hour = now.getHours();
+                  var min = now.getMinutes();
+                    //出力用
+                  var s = hour + ":" + min ;
+                  return s;
+                  }
+</script>
+<label for="clock_in">出勤時刻</label><br />
+ <input type="time" id="clock_in" name="clock_in" value="<fmt:formatDate value="${report.clock_in}" pattern='HH:mm'/>"/> <input type="button" value="出勤" onclick="getClock_inNow();"><br/>
+ <label for="clock_out">退勤時刻</label><br />
+ <input type="time" id="clock_out" name="clock_out" value="<fmt:formatDate value="${report.clock_out}" pattern='HH:mm'/>" /> <input type="button" value="退勤" onclick="getClock_outNow();"><br/>
+ <br /><br />
+
 <label for="report_date">日付</label><br />
 <input type="date" name="report_date" value="<fmt:formatDate value='${report.report_date}' pattern='yyyy-MM-dd' />" />
 <br /><br />

@@ -14,12 +14,14 @@ public class ReportValidator {
             errors.add(title_error);
         }
 
-        String content_error = _validateContent(r.getTitle());
+        String content_error = _validateContent(r.getContent());
         if(!content_error.equals("")) {
             errors.add(content_error);
         }
 
         return errors;
+
+
     }
 
     private static String _validateTitle(String title) {
@@ -35,6 +37,8 @@ public class ReportValidator {
         }
 
         return "";
+
     }
+
 
 }

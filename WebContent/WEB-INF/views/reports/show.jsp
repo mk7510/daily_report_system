@@ -18,6 +18,14 @@
                             <td><fmt:formatDate value="${report.report_date}" pattern="yyyy-MM-dd" /></td>
                         </tr>
                         <tr>
+                            <th>出勤時刻</th>
+                            <td class="clock_in"><fmt:formatDate value='${report.clock_in}' pattern='HH:mm'/></td>
+                        </tr>
+                        <tr>
+                            <th>退勤時刻</th>
+                            <td class="clock_out"><fmt:formatDate value='${report.clock_out}' pattern='HH:mm'/></td>
+                        </tr>
+                        <tr>
                             <th>内容</th>
                             <td>
                                 <pre><c:out value="${report.content}" /></pre>
