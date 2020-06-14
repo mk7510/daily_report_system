@@ -22,11 +22,8 @@
             // 現在時刻取得
             function getNow() {
                   var now = new Date();
-                  var hour = now.getHours();
-                  var min = now.getMinutes();
-                  if(min < 10){
-                      var min = ('00'+ min).slice(-2);
-                  }
+                  var hour = ('00' + now.getHours()).slice(-2);
+                  var min = ('00' + now.getMinutes()).slice(-2);
                     //出力用
                   var s = hour + ":" + min ;
                   return s;
